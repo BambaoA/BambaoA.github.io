@@ -123,6 +123,9 @@ main {
 #hide-card{
     display: none !important;
 }
+#hide-img{
+    visibility: hidden !important;
+}
 
 .item-card {
     background: #f6f6f6;
