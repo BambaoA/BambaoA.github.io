@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models Portfolio</title>
+    <link rel="stylesheet" href="styleportfolio.css">
+    <link rel="stylesheet" href="3D-Models.css">
+    <style>
+        .model-card .item-card:hover{
+            transform: none;
+            box-shadow: none;
+        }                
+        .item-card {
+            flex: 1;
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            cursor: pointer;
+        }        
+        #item-card-chess1 {
+            background-image: url('Website/3DModels/Chess1.png');
+        }        
+        #item-card-chess2 {
+            background-image: url('Website/3DModels/Chess2.png');
+        }        
+        #item-card-room {
+            background-image: url('Website/3DModels/Room.png');
+        }     
+        /* Lightbox styles */
+        #item-card-Food1 {
+            background-image: url('Website/3DModels/CupCake.png');
+        }  
+        #item-card-Food2 {
+            background-image: url('Website/3DModels/Coke.png');
+        } 
+        #item-card-Food3 {
+            background-image: url('Website/3DModels/FruitBasket.png');
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(145, 144, 144, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }        
+        .lightbox.active {
+            display: flex;
+        }        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 36px;
+            cursor: pointer;
+            font-weight: bold;
+        }       
+        .lightbox-close:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav class="page-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown"> 
+            <a href="#projects" class="dropbtn">Projects</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="#" class="sub-dropbtn">Work</a>
+                    <div class="sub-dropdown-content">
+                        <a href="SchoolProject.html">School Projects</a>
+                        <a href="Internship.html">Internship</a>
+                    </div>
+                </div>
+                <a href="3D-Models.html">3D Models</a>
+                <a href="3D-Animations.html">3D Animations</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>3D Models (Props)</h1>
+        <div class="gallery">
+            <div class="model-card" section="chess">
+                <div class="model-images-row">
+                    <div class="item-card" id="item-card-chess1"></div>                        
+                    <div class="item-card" id="item-card-chess2"></div>             
+                </div>
+                <div class="model-info">
+                    <h2>Chess Pieces</h2>
+                    <p>A 3D rendering of classic chess pieces (King, Queen, Rook, Bishop, Knight, Pawn). 
+                    <br> The pieces are rendered in AutoDesk Maya 3D.</p>
+                </div>
+            </div>
+            <div class="model-card" section="Room">
+                <div class="model-images-row">
+                    <div class="item-card" id="item-card-room"></div>         
+                </div>
+                <div class="model-info">
+                    <h2>Room Model</h2>
+                    <p>A 3D rendering of a room model with furniture such as bed, lamp, shelves, table. 
+                    <br> The model is rendered in AutoDesk Maya 3D.</p>
+                </div>
+            </div>
+             <div class="model-card" section="Fruits n Coke" >
+                <div class="model-images-row">
+                    <div class="item-card" id="item-card-Food1"></div>         
+                    <div class="item-card" id="item-card-Food2"></div>         
+                    <div class="item-card" id="item-card-Food3"></div>         
+                </div>
+                <div class="model-info">
+                    <h2>Room Model</h2>
+                    <p>A 3D rendering of a room model with furniture such as bed, lamp, shelves, table. 
+                    <br> The model is rendered in AutoDesk Maya 3D.</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged image">
+    </div>
+    
+    <script>
+        // Get lightbox elements
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        
+        // Get all item cards
+        const itemCards = document.querySelectorAll('.item-card');
+        
+        
+        itemCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // Get background-image URL from CSS
+                const bgImage = window.getComputedStyle(this).backgroundImage;
+                // Extract URL from url('...')
+                const imageUrl = bgImage.replace(/url\(['"]?([^'"]+)['"]?\)/g, '$1');
+                lightboxImg.src = imageUrl;
+                lightboxImg.alt = this.id;
+                lightbox.classList.add('active');
+            });
+        });
+        
+        // Close lightbox when clicking X
+        closeBtn.addEventListener('click', function() {
+            lightbox.classList.remove('active');
+        });
+        
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

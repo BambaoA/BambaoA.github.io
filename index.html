@@ -5,41 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styleportfolio.css">
+    <style>        
+        #item-card1 {
+            background: url('Website/TippingPoint/Img/TippingPoint.png');    
+            background-size: cover;                       
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1>Amado Joven M. Bambao</h1>
     </header>
-    <nav>
+    <nav class="page-nav">
         <a href="index.html">Home</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <div class="dropdown"> 
             <a href="#projects" class="dropbtn">Projects</a>
             <div class="dropdown-content">
                 <div class="sub-dropdown">
-                    <a href="#" class="sub-dropbtn">Works</a>
+                    <a href="#" class="sub-dropbtn">Work</a>
                     <div class="sub-dropdown-content">
                         <a href="SchoolProject.html">School Projects</a>
                         <a href="Internship.html">Internship</a>
                     </div>
                 </div>
-                <a href="#3d">3D Models</a>
-                <a href="#3d-anim">3D Animations</a>
+                <a href="3D-Models.html">3D Models</a>
+                <a href="3D-Animations.html">3D Animations</a>
             </div>
         </div>
-        <a href="#contact">Contact</a>
     </nav>
     <main>
-        <section id="recent-works" class="works-section">
-            <h2>Recent Works</h2>
-            <div class="works-grid">             
-                <article class="work-card" id="work-card1">
-                    <div class="work-card-title">Tipping Point</div>
-                </article>
-                <article class="work-card">
-                    <div class="work-card-icon">▶</div>
-                    <div class="work-card-title">Name of video</div>
-                </article>
+        <section id="recent-items" class="items-section">
+            <h2>Recent items</h2>
+            <div class="items-grid">     
+                <article class="item-card" id="hide-card">
+                    <!-- <div class="item-card-title">Internship Project </div> -->
+                </article>     
+                <a href="SchoolProject.html">
+                    <article class="item-card" id="item-card1" >                        
+                        <div class="item-card-title">Tipping Point</div>
+                    </article>
+                </a>   
+                <article class="item-card" id="hide-card">
+                    <!-- <div class="item-card-title">Internship Project </div> -->
+                </article>                
+            </div>
+        </section>
+        <!---Past items --->
+        <section id="past-items" class="items-section">
+            <h2>Past items</h2>
+            <div class="items-grid">  
+                <a href="3D-Models.html">   
+                    <article class="item-card" id="item-card1">                        
+                        <div class="item-card-title">3D Models</div>
+                        <div class="item-card-title">AutoDesk Maya 3D</div>                        
+                    </article>
+                </a>
+                <a href="3D-Animations.html">
+                    <article class="item-card">
+                        <div class="item-card-title">3D Animation</div>
+                        <div class="item-card-title">AutoDesk Maya 3D</div>
+                    </article>
+                </a>
+                </article>                
             </div>
         </section>
     </main>

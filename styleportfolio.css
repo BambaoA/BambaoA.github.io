@@ -97,12 +97,12 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 }
-.works-section {
+.items-section {
     margin-top: 3rem;
     text-align: center;
 }
 
-.works-section h2 {
+.items-section h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: #333;
@@ -111,14 +111,20 @@ main {
     padding-bottom: 0.5rem;
 }
 
-.works-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.items-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 1.25rem;
     margin-top: 1rem;
 }
 
-.work-card {
+#hide-card{
+    display: none !important;
+}
+
+.item-card {
     background: #f6f6f6;
     border: 2px solid #e0e0e0;
     border-radius: 12px;
@@ -126,27 +132,27 @@ main {
     position: relative;
     align-content: center;
     min-height: 240px;
+    width: 360px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}      
-
-#work-card1 {
-    background: url('Website/TippingPoint/Img/TippingPoint.png');    
-    background-size: cover;                       
-}
-#work-card2 {
-    background: url('Website/TippingPoint/Img/TippingPoint.png');    
-    background-size: cover;                       
 }
 
-.work-card:hover {
+.item-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 30px rgba(0,0,0,0.1);
     border-color: #bbb;
 }
 
-.work-card-icon {
+/* disable item-card hover inside gallery or model-card */
+.gallery .item-card:hover,
+.model-card .item-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #e0e0e0;
+}
+
+.item-card-icon {
     width: 60px;
     height: 60px;
     border: 1px solid #ddd;
@@ -160,7 +166,7 @@ main {
     margin: 0 auto 0.85rem;
 }
 
-.work-card-title {
+.item-card-title {
     font-family: 'Courier New', Courier, monospace;
     margin-top: 0.5rem;
     color: #ffffff;
