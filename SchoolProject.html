@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Project - Tipping Point</title>
+    <link rel="stylesheet" href="styleportfolio.css">
+    <style>
+        body { 
+            background: #070a1f; 
+            color: #e7e7f5; }
+        .hero {
+            min-height: 480px;
+            background: url('Website/TippingPoint/Img/TippingPoint.png') center/cover no-repeat;
+            position: relative;
+            display: grid;
+            place-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.85));
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 960px;
+            padding: 0 1rem;
+        }
+        .hero-content h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-bottom: 0.4rem;
+        }
+        .hero-content p { 
+            font-size: 1.1rem; 
+        }
+        .project-body {
+             max-width: 960px; 
+             margin: 0 auto; 
+             padding: 1rem; 
+        }
+        .project-body h2 {
+             color: #f4f4ff; 
+        }
+        .project-body a.button { 
+            display:inline-block; margin:0.6rem 0; 
+            background:#ff4f42; 
+            color:white; 
+            padding:0.7rem 1rem; 
+            border-radius:8px; 
+            text-decoration:none; 
+            font-weight:700; 
+        }
+
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Tipping Point — School Project</h1>
+    </header>
+
+    <nav class="page-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown"> 
+            <a href="#projects" class="dropbtn">Projects</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="#" class="sub-dropbtn">Works</a>
+                    <div class="sub-dropdown-content">
+                        <a href="SchoolProject.html">School Projects</a>
+                        <a href="Internship.html">Internship</a>
+                    </div>
+                </div>
+                <a href="3D-Models.html">3D Models</a>
+                <a href="3D-Animations.html">3D Animations</a>
+            </div>
+        </div>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tipping Point</h1>
+            <p>The Tipping Point is a 3D hack-n-slash action-adventure game that is set in a fantasy world that’s named Eregor, where its inhabitants are fighting an endless war amongst themselves out of ignorance, hatred, and thirst for power.</p>
+        </div>
+    </section>
+
+    <section class="project-body" id="about">
+        <h2>Project summary</h2>
+        <p>The Tipping Point aims to immerse players in a story that deals with modern issues of corruption and moral decay. This work depicts a world in which the protagonist faces the temptations of power and the consequences of falling for it. The game invites players to confront the complexities of corruption and its consequences through a combination of war scenarios and dark fantasy. </p>
+        <div>
+            <h3>Prototype Details</h3>
+            <ul>
+                <li>Playable gameplay albeit low quality characters</li>
+                <li>Storyline/Cutscenes completed </li>
+            </ul>
+        </div>
+
+        <h2>Video preview</h2>
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 12px 22px rgba(0,0,0,0.35); margin-top:1rem;">
+            <iframe src="https://youtube.com/embed/grBWfRvj1r0" title="Tipping Point Demo" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+        </div>
+
+        <p style="margin-top:1.2rem;"></p>
+    </section>
+
+    <footer style="background:#111528; color:#d6d6f0; text-align:center; padding:1rem; margin-top:2rem;">
+        &copy; 2025 Amado Joven M. Bambao - School Project Page
+    </footer>
+</body>
+</html>
