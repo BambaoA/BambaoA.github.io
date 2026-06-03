@@ -4,17 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Animations - Work in Progress</title>
+    <link rel="stylesheet" href="styleportfolio.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: Arial, sans-serif;
-        }
         .container {
             text-align: center;
             background: white;
@@ -30,12 +21,53 @@
             color: #666;
             font-size: 18px;
         }
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main{
+            flex: 1;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Still WIP 🚧</h1>
-        <p>This page is currently under construction. Come back soon!</p>
-    </div>
+    <header>
+        <h1 style="color: white;">Amado Joven M. Bambao</h1>
+    </header>
+    <nav class="page-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown"> 
+            <a href="#projects" class="dropbtn">Projects</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="#" class="sub-dropbtn">Work</a>
+                    <div class="sub-dropdown-content">
+                        <a href="SchoolProject.html">School Projects</a>
+                        <a href="Internship.html">Internship</a>
+                    </div>
+                </div>
+                <a href="3D-Models.html">3D Models</a>
+                <a href="3D-Animations.html">3D Animations</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!---Recent items --->
+        <section id="recent-items" class="items-section">
+            <div class="container">
+                <h1>3D Animations</h1>
+                <p>This page is currently under construction. Come back soon!</p>
+            </div>
+        </section>
+    </main>        
+    <footer>
+        DISCLAIMER: This portfolio is a work in progress and may contain Student projects/models. Some sections are under development and may not reflect the final design or content of the portfolio. Please check back later for updates and additional information.
+        <p>&copy; 2025 Amado Joven M. Bambao's Porfolio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
